@@ -20,15 +20,13 @@ $ node converter-program.js
         {"name": "Afghanistan", "code": "AF"},
         {"name": "Åland Islands", "code": "AX"},
         {"name": "Albania", "code": "AL"}
-        // ...
     ]
 }
 ```
 
-... to this:
+... to this (printed to Terminal):
 
-```sql
--- printed in Terminal
+```
 INSERT INTO countries
 (name, code)
 VALUES
@@ -76,6 +74,8 @@ INSERT INTO customers
 (first_name, last_name, email)
 VALUES
 ('Joseph','Gordon', 'levitt@example.com');
+
+-- more ...
 ```
 
 Hint: You can use the external module [`jsonfile`](https://www.npmjs.com/package/jsonfile) to read/write JSON files (run `yarn add jsonfile` or `npm install jsonfile`). 
