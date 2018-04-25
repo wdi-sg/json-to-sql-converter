@@ -49,7 +49,7 @@ Your team is growing and your tech lead wants you to __improve your program so t
 
 Hint: Node has an inbuilt module that handles reading and writing of data into files. It should be relatively easy to google for it!
 
-## Further - specify an input file
+## Further - accepting user input arguments
 
 Marketing has just spent a bunch of money acquiring a large dataset of customers and emails (not included in this repo), and it came in JSON format. They want to seed them into the `customers` table in your database.
 
