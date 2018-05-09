@@ -36,7 +36,7 @@ function convertDataToSQL(inputData) {
             entries[i][1] = entries[i][1].replace(/'/g, "''");
             values += '\'' + entries[i][1] + '\'' + (i == size - 1 ? ')' : ', ');
         };
-        return `INSERT INTO ${dbTableName} ${column_names} VALUES ${values}`
+        return `INSERT INTO ${dbTableName} ${column_names} VALUES ${values};`
     })
     return results.join('\n');
 };
