@@ -1,0 +1,23 @@
+{
+  "name": "json-to-sql-converter",
+  "version": "1.0.0",
+  "description": "Your tech lead has just given you a task to __write a Node program that converts JSON into SQL__. The goal with this program is to translate every item in an array in a JSON file into individual `INSERT` statements, so that those items can be seeded into your SQL database.",
+  "main": "converter-program.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lajansaa/json-to-sql-converter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lajansaa/json-to-sql-converter/issues"
+  },
+  "homepage": "https://github.com/lajansaa/json-to-sql-converter#readme",
+  "dependencies": {
+    "jsonfile": "^4.0.0"
+  }
+}
