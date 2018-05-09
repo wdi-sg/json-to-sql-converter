@@ -96,7 +96,10 @@ function main() {
                 rl.close();
                 next();
             });
-        };
+        } else {
+            rl.close();
+            next();
+        }
     });
 
     
