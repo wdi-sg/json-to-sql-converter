@@ -33,6 +33,7 @@ function convertDataToSQL(inputData) {
         let values = '(';
         for (let i = 0; i < size; i++) {
             column_names += entries[i][0] + (i == size - 1 ? ')' : ', ');
+            entries[i][1] = entries[i][1].replace(/'/g, "''");
             values += '\'' + entries[i][1] + '\'' + (i == size - 1 ? ')' : ', ');
         };
         return `INSERT INTO ${dbTableName} ${column_names} VALUES ${values}`
@@ -58,7 +59,7 @@ function main() {
                         output = './' + ans;
                         if (process.argv[4] === undefined) {
                             rl.question('Name of database table to insert into: ', (ans) => {
-                                dbTableName = './' + ans;
+                                dbTableName = ans;
                                 rl.close();
                                 next();
                             });
@@ -69,7 +70,7 @@ function main() {
                     });
                 } else if (process.argv[4] === undefined) {
                     rl.question('Name of database table to insert into: ', (ans) => {
-                        dbTableName = './' + ans;
+                        dbTableName = ans;
                         rl.close();
                         next();
                     });
@@ -80,7 +81,7 @@ function main() {
                 output = './' + ans;
                 if (process.argv[4] === undefined) {
                     rl.question('Name of database table to insert into: ', (ans) => {
-                        dbTableName = './' + ans;
+                        dbTableName = ans;
                         rl.close();
                         next();
                     });
@@ -91,7 +92,7 @@ function main() {
             });
         } else if (process.argv[4] === undefined) {
             rl.question('Name of database table to insert into: ', (ans) => {
-                dbTableName = './' + ans;
+                dbTableName = ans;
                 rl.close();
                 next();
             });
